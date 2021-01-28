@@ -21,7 +21,7 @@
 We need 
 
 1. exception condition(when model or pipeline failed)
-2. outlier detection / wired input detection(the data poison / default model behavior)
+2. outlier detection / weired input detection(the data poison / default model behavior)
 3. doamian adaption technique / active learning technique
 4. data goverence skills
 
@@ -95,7 +95,7 @@ Gender, Age, Color, Sex, ...
 
 <img src='./asserts/1_24.png'></img>
 
-* 效率隨著團陮成熟度而提高
+* 效率隨著團隊成熟度而提高
 
 # If I wanna pick a most important one from this chapter
 
