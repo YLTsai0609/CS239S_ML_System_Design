@@ -11,3 +11,4 @@ third party blog
 | Chapter | Title                                     | Release Date | Complete Date |
 |---------|-------------------------------------------|--------------|---------------|
 | 1       | Understanding machine learning production |2021 Jan 11   |  2021  Jan 25 |
+| 2       | Introduction to machine learning system design |2021 Jan 13   |   |

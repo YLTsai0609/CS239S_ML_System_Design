@@ -96,3 +96,35 @@ Gender, Age, Color, Sex, ...
 <img src='./asserts/1_24.png'></img>
 
 * 效率隨著團陮成熟度而提高
+
+# If I wanna pick a most important one from this chapter
+
+Leadboard of research
+
+1. accuracy-raleted metrics
+
+Leadboard of production
+
+by each product/project, may be different, but frequently...
+
+1. accuracy-raleted metrics
+2. latentcy
+3. prediction cost
+4. interpretability
+5. robustness
+6. ease of use(open source software)
+7. hardware requirement
+
+what is robustness exactly?
+
+might be - 
+
+1. robustness against dynamics dataset(might not be a algorithm problem)
+2. robustness against outlier/wired input(might not be a algorithm problem)
+3. robustness against frontend datasource / backend api interface inpterruption/break
+
+The further course we'll get deeper in it.
+
+# Additional
+
+https://bymiachang.com/2021/01/24/cs329s-course01-intro-ml-products-02/
