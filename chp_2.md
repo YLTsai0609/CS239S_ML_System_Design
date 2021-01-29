@@ -147,7 +147,7 @@ This part can be pre-design and post evaluation.
 
 # Details and case study of every stage of iterative process
 
-## Project scoping
+# Project scoping
 
 <img src='./asserts/2_32.png'></img>
 
@@ -169,4 +169,64 @@ Extreme and hatful political content will be a big part when we tring maximizing
 
 facebook, youtube also part of it.
 
-TODO objective
+## from goal to objective (modeling)
+
+Goals -> Objective (more psecific)
+
+start here
+
+<img src='./asserts/2_37.png'></img>
+
+<img src='./asserts/2_38.png'></img>
+
+Not Safe For Work(MSFW) - sex content, job content maybe
+
+<img src='./asserts/2_39.png'></img>
+
+filter fake news and rank them by quality, finally, CTR.
+
+<img src='./asserts/2_40.png'></img>
+
+<img src='./asserts/2_41.png'></img>
+
+<img src='./asserts/2_42.png'></img>
+
+<img src='./asserts/2_43.png'></img>
+
+[A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576.pdf)
+
+Custom loss is widely used, just need more experiemnts to make sure how to make it work. But it is not good for ML System design.
+
+<img src='./asserts/2_44.png'></img>
+
+<img src='./asserts/2_45.png'></img>
+
+Just like a stacked model.
+
+A simple logistic regression based on two model input, give $\alpha, \beta$, then we don't need to retrain whole 2 model when we wanna optimized a better $\alpha, \beta$
+
+## decouple helps a lot
+
+<img src='./asserts/2_46.png'></img>
+
+1. easier training - multi-objective -> two stage single objective
+2. easier to tweak your system(dynamic tweak with the busniess subject.)
+3. easier for maintenance - different objectives might need difference maintenance schedules.
+
+## Constraint of project
+
+<img src='./asserts/2_47.png'></img>
+
+<img src='./asserts/2_48.png'></img>
+
+<img src='./asserts/2_49.png'></img>
+
+<img src='./asserts/2_50.png'></img>
+
+<img src='./asserts/2_51.png'></img>
+
+legacy code will be a contraint.
+
+## Evaluation
+
+<img src='./asserts/2_52.png'></img>
