@@ -10,5 +10,7 @@ third party blog
 
 | Chapter | Title                                     | Release Date | Complete Date |
 |---------|-------------------------------------------|--------------|---------------|
-| 1       | Understanding machine learning production |2021 Jan 11   |  2021  Jan 25 |
-| 2       | Introduction to machine learning system design |2021 Jan 13   |   |
+| 1       | Understanding Machine Learning Production |2021 Jan 11   |  2021  Jan 25 |
+| 2       | Introduction to Machine Learning System Design |2021 Jan 13   | 2021 Feb 1  |
+| 3       | Data Engineering / Data Management |2021 Jan 13   |   |
+| Project       | End to End ML System design |   |   |

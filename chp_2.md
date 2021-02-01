@@ -203,7 +203,7 @@ Custom loss is widely used, just need more experiemnts to make sure how to make 
 
 Just like a stacked model.
 
-A simple logistic regression based on two model input, give $\alpha, \beta$, then we don't need to retrain whole 2 model when we wanna optimized a better $\alpha, \beta$
+A simple logistic regression based on two model input, give $\alpha, \beta$, then we don't need to retrain whole 2 model when we wanna optimized a better $\alpha, \beta$, Or just a human control value!
 
 ## decouple helps a lot
 
@@ -229,4 +229,105 @@ legacy code will be a contraint.
 
 ## Evaluation
 
-<img src='./asserts/2_52.png'></img>
+<img src='./asserts/2_54.png'></img>
+
+## When to use ML?
+
+<img src='./asserts/2_55.png'></img>
+
+<img src='./asserts/2_56.png'></img>
+
+<img src='./asserts/2_57.png'></img>
+
+<img src='./asserts/2_58.png'></img>
+
+<img src='./asserts/2_59.png'></img>
+
+<img src='./asserts/2_60.png'></img>
+
+<img src='./asserts/2_61.png'></img>
+
+## When NOT to use ML?
+
+1. It's unehical.
+2. Simple solution to do this trick.
+3. It's impossible to get the right data.
+4. One single prediction error can cause devastating consequences.
+5. Every single decision the system makes must be exaplainable.
+6. It's not cost effective.(maybe now it's not, but it'll be in the further.)
+
+## It can be part of system
+
+<img src='./asserts/2_62.png'></img>
+
+# Four Phase of ML Adaption
+
+1. heuristic. - high cp!
+2. Simplest ML model - validate hypothesis, validate pipeline.
+3. Optimizing simple models - different objective func, feature engineering, more data, ensembling.
+4. Complex model. 
+
+<img src='./asserts/2_63.png'></img>
+<img src='./asserts/2_64.png'></img>
+<img src='./asserts/2_65.png'></img>
+<!-- <img src='./asserts/2_66.png'></img> -->
+
+# If I wanna pick a most important one from this chapter
+
+Case study : 
+
+ML goal breakdown into objective and constraint.
+
+Building a ranking system of news feed.
+
+pick a goal 
+
+1. minimize the spread of misinformation.
+2. maximize revenue from sponsered content.
+3. maximize engagement. (we pick this for better user experience and longer app usage time)
+
+Side effect : extreme and hateful political content will be a big part when we tring maximizing engagement.
+
+To avoid side effect.
+
+E.g. Ranking system for **wholesome** newsfeed.
+
+| Goal                         | Objective                                     |
+|------------------------------|-----------------------------------------------|
+| General purpose of a project | Specific steps on how to realize that purpose |
+| Maximize user's engagement   | 1. Filter out spam <br> 2. Filter out Not Safe For Work(NSFW) <br> 3. Filter out misinformation <br> 4. Rank post by quality. <br> 5. Rank post by how likely user will click on it                                         |
+
+Decouple Multiple Objective Optimization.
+
+$L_{total} = \alpha L_{quality} + \beta L_{engagement}$
+
+Style transfer do this work!
+
+But we can just combine two single model with coefficient.
+
+Why?
+
+1. Easier for training - only one object for each model.
+
+2. Easier for tweak your system. ($\alpha$ % model optimized for quality + $\beta$ % model optmized for engagement)
+3. easier for maintance - different objective might need different maintance schedules.
+
+   * **Spamming technique evolve faster** than rhe way post quality ia perceived.
+   * **Spamming filtering system** needs update more frequently than quality ranking system.
+
+Constraint : 
+
+1. Time
+2. Buget
+3. Performance
+4. Privacy
+5. Competitors
+6. Legacy System
+
+<img src='./asserts/2_47.png'></img>
+
+<img src='./asserts/2_49.png'></img>
+
+<img src='./asserts/2_50.png'></img>
+
+<img src='./asserts/2_51.png'></img>
