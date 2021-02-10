@@ -39,3 +39,7 @@ fragment (n.) 分段
 # Storing Activation
 
 <img src='./asserts/5_12.png'></img>
+
+TBD : slide 22
+
+and Pytorch
