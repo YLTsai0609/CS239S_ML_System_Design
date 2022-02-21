@@ -1,5 +1,7 @@
 # CS 329S
 
+still updating on 20220221
+
 [home page](https://stanford-cs329s.github.io/)
 
 Start time : 2021 Jan(Still new!)
