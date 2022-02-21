@@ -31,15 +31,15 @@ Things help us to know why our ML service is break.
 
 # Monitoring
 
-<img src='./asserts/13_1.png'></img>
+<img src='./assets/13_1.png'></img>
 
 ## Monitoring System Infrastructure
 
-<img src='./asserts/13_2.png'></img>
+<img src='./assets/13_2.png'></img>
 
-<img src='./asserts/13_3.png'></img>
+<img src='./assets/13_3.png'></img>
 
-<img src='./asserts/13_4.png'></img>
+<img src='./assets/13_4.png'></img>
 
 In our case in Pixnet
 
@@ -47,15 +47,15 @@ In our case in Pixnet
 2. we use airflow(composer on GCP to monitor the computing job)
 3. we use app engine monitor to take care about the latency - we set auto-scaling for peak traffic.
 
-<img src='./asserts/13_5.png'></img>
+<img src='./assets/13_5.png'></img>
 
 In pixnet, we check the app engine log and composer error log to know what happend and provide us the lead.
 
-<img src='./asserts/13_6.png'></img>
+<img src='./assets/13_6.png'></img>
 
 ## Monitoring Data Pipelines
 
-<img src='./asserts/13_10.png'></img>
+<img src='./assets/13_10.png'></img>
 
 we use airflow to minitor the data dependencies
 
@@ -65,31 +65,31 @@ Distribution : we can use T-Test / ANOVA to detect dataset shift(the gorund-trut
 
 Or use ML to detect training/testing feature difference or not.
 
-<img src='./asserts/13_7.png'></img>
+<img src='./assets/13_7.png'></img>
 
 Or if your model is under attack?
 
 [Detecting Adversarial Samples from Artifacts 2017](https://stanford-cs329s.github.io/slides/cs329s_13_slides_monitoring.pdf)
 
-<img src='./asserts/13_8.png'></img>
+<img src='./assets/13_8.png'></img>
 
 Also use data versioning to managing the data dependencies.(we use it in pixlake.)
 
-<img src='./asserts/13_9.png'></img>
+<img src='./assets/13_9.png'></img>
 
 Monitor the features! use less correlated feature to each other which make your algo strong.
 
 ## Monitoring Model Performance
 
-<img src='./asserts/13_11.png'></img>
+<img src='./assets/13_11.png'></img>
 
-<img src='./asserts/13_12.png'></img>
+<img src='./assets/13_12.png'></img>
 
-<img src='./asserts/13_13.png'></img>
+<img src='./assets/13_13.png'></img>
 
 If your label data is a esitimation of ground-truth.
 
-<img src='./asserts/13_14.png'></img>
+<img src='./assets/13_14.png'></img>
 
 lesion - 腫瘤
 
@@ -97,23 +97,23 @@ bengin - 良性
 
 malignant - 惡性
 
-<img src='./asserts/13_15.png'></img>
+<img src='./assets/13_15.png'></img>
 
-<img src='./asserts/13_16.png'></img>
+<img src='./assets/13_16.png'></img>
 
 Use LIME or Shap to do this.
 
 # Maintenance - Guide to releaseing a new model.
 
-<img src='./asserts/13_17.png'></img>
+<img src='./assets/13_17.png'></img>
 
 
-<img src='./asserts/13_18.png'></img>
+<img src='./assets/13_18.png'></img>
 
 Judiciously - 明智地
 
 [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/)
 
-<img src='./asserts/13_19.png'></img>
+<img src='./assets/13_19.png'></img>
 
 Shadow release - we deploy two models, new model will not impact the user(unless we need online metrics)
