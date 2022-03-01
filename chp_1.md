@@ -1,5 +1,7 @@
 # Inderstanding ML production
 
+[2022 slides](https://docs.google.com/presentation/u/2/d/1bhjgRelQ0O5FnYCOGiCVWg_SkfRcZ9bffQsgk6yAaL0/edit?usp=sharing)
+
 <img src='./assets/1_1.png'></img>
 
 # Stackholder Objective vs Researcher Objective
@@ -8,9 +10,20 @@
 
 <img src='./assets/1_3.png'></img>
 
+# An overview
+
+<img src='./assets/1-2022_1.png'></img>
+
+
 ## Latency effect the production/user experience
 
-<img src='./assets/1_4.png'></img>
+<img src='./assets/1-2022_2.png'></img>
+
+[Akamai 17](https://www.prnewswire.com/news-releases/akamai-online-retail-performance-report-milliseconds-are-critical-300441498.html)
+
+[Booking 19](https://booking.ai/150-successful-machine-learning-models-6-lessons-learned-at-booking-com-681e09107bec)
+
+[Google 16](https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-site-load-time-statistics/)
 
 <img src='./assets/1_5.png'></img>
 
