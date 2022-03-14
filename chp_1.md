@@ -141,3 +141,5 @@ The further course we'll get deeper in it.
 # Additional
 
 https://bymiachang.com/2021/01/24/cs329s-course01-intro-ml-products-02/
+
+
