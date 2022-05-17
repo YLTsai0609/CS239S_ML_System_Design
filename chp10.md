@@ -74,7 +74,10 @@ if a feature importance become more important over time, it will be a suspecious
 
 <img src='./assets/10_24.png'></img>
 
-* push new items to users (new items have no clicks, not possible to be recommend)
+* since feedback is biased (user only give feedback when the item is recommend to them)
+* Tiktok push popular items(but not in prediction) to get unbiased feedback.
+  * tradeoff by user experience.
+  * [some math trick to avoid it - Recommendations as Treatments: Debiasing Learning and Evaluation 2016, citation 306](https://arxiv.org/pdf/1602.05352.pdf)
 
 ### Positional features
 
@@ -82,7 +85,17 @@ if a feature importance become more important over time, it will be a suspecious
 
 User click the item due to good recommendation or just position?
 
-ans : training your data with positional features
+#### Naive Approach
+ans : 
+
+training : data with positional features (e.g. is_first)
+
+inference : set all testing set (is_first = False)
+
+might not be enough to combat degenerate feedback loops.
+
+#### 2 models approach
+
 
 <img src='./assets/10_26.png'></img>
 
