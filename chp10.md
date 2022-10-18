@@ -101,4 +101,54 @@ might not be enough to combat degenerate feedback loops.
 
 design a model only predict the prob when **user saw the items**
 
-### How might degenerate feedback loops occur?
+### Data Distribution Drift
+
+source dist : data the model trained
+target dist : data the model run inference
+
+concept from transfer learning.
+
+
+<img src='./assets/10_27.png'></img>
+
+$P(Y|X) = \frac{P(X, Y)}{P(X)}$ --> $P(Y, X) = P(Y|X)P(X) = P(X|Y)P(Y)$
+
+$P(X, Y)$ --> X, Y 同時發生
+
+<img src='./assets/10_28.png'></img>
+
+### Covariate shift
+
+<img src='./assets/10_29.png'></img>
+
+<img src='./assets/10_30.png'></img>
+
+Case I - Cancer detection
+
+* 特徵集的分布變了，但特徵和 Target 的關係沒變
+* most widely studied forms of data distribution shift
+* cancer prediction
+  * you have a bias data (person who dosn't have a cancer won't see the doctor - which you collect your data)
+
+
+Case II - Potential VIP user detection
+
+<img src='./assets/10_31.png'></img>
+
+* New marketing campaign attracting users from with higher income
+* P(income) changed (if we have such this data)
+* P(convert to paid user | free user) remains the same.
+* We have a biased data (income is higher)
+* Strategy?
+
+<img src='./assets/10_32.png'></img>
+
+fix it by importance weighting.
+
+### Label shift
+
+<img src='./assets/10_34.png'></img>
+
+<img src='./assets/10_33.png'></img>
+
+**$P(x)$ changes usually leads $P(Y)$ changed, since $P(Y|X)$ ususally remains the same**
