@@ -1,3 +1,10 @@
+# Ref
+
+docx : https://docs.google.com/document/d/14uX2m9q7BUn_mgnM3h6if-s-r0MZrvDb-ZHNjgA1Uyo/edit#heading=h.2p8lce0bcck
+
+pptx : https://docs.google.com/presentation/d/1tuCIbk9Pye-RK1xqiiZXPzT8lIgDUL6CqBkFSYZXkbY/edit#slide=id.g112c1e99806_0_529
+
+
 # ML Failure Diagnosis
 
 ## Natural lavels
@@ -104,6 +111,7 @@ design a model only predict the prob when **user saw the items**
 ### Data Distribution Drift
 
 source dist : data the model trained
+
 target dist : data the model run inference
 
 concept from transfer learning.
@@ -111,24 +119,46 @@ concept from transfer learning.
 
 <img src='./assets/10_27.png'></img>
 
-$P(Y|X) = \frac{P(X, Y)}{P(X)}$ --> $P(Y, X) = P(Y|X)P(X) = P(X|Y)P(Y)$
+* Notations
+* $X$ for features, $Y$ for targets
+* $P(X, Y)$ - joint distribution of features and targets (聯合機率，表達 features, targets 同時發生的機率分佈)
+* $P(Y|X)$ - conditional distribution(條件機率) of targets when features are seen
+  * the modeling distribution which ML models.
+* training data : sampling from joint distribution
 
-$P(X, Y)$ --> X, Y 同時發生
+e.g. Is an email spam given the content
+* $P(X)$ - email content
+* $P(Y)$ - is the email spam
+
+We can decompse $P(X, Y)$ in two ways
+
+$P(X, Y) = P(Y|X)P(X)$ 
+
+$P(X, Y) = P(X|Y)P(Y)$
 
 <img src='./assets/10_28.png'></img>
 
-### Covariate shift
+### Covariate shift 
+
+* Covariate - 協變量，也就是 X
 
 <img src='./assets/10_29.png'></img>
 
 <img src='./assets/10_30.png'></img>
 
+<img src='./assets/10_35.png'></img>
+
 Case I - Cancer detection
 
-* 特徵集的分布變了，但特徵和 Target 的關係沒變
-* most widely studied forms of data distribution shift
+* **特徵集的分布變了，但特徵和 Target 的關係沒變**
+* **most widely studied forms of data distribution shift**
 * cancer prediction
   * you have a bias data (person who dosn't have a cancer won't see the doctor - which you collect your data)
+  * production 容易誤判年紀大於 40 時，癌症風險高估
+* Strategy?
+  * 對齊 Source dist, Target dist
+  * Source dist 不要隨機抽，要照著 Target dist 來抽
+
 
 
 Case II - Potential VIP user detection
@@ -141,9 +171,23 @@ Case II - Potential VIP user detection
 * We have a biased data (income is higher)
 * Strategy?
 
+<img src='./assets/10_36.png'></img>
+
+
 <img src='./assets/10_32.png'></img>
 
-fix it by importance weighting.
+fix it by importance weighting
+
+```
+Importance weighting consists of two steps: estimate the density ratio between the real-world input distribution and the training input distribution, then weight the training data according to this ratio, and train an ML model on this weighted data
+```
+
+importance weighting : 
+
+[paper - Rethinking Importance Weighting for Deep
+Learning under Distribution Shift 2020](https://arxiv.org/pdf/2006.04662.pdf)
+
+[github, 16 stars](https://github.com/TongtongFANG/DIW)
 
 ### Label shift
 
@@ -151,4 +195,87 @@ fix it by importance weighting.
 
 <img src='./assets/10_33.png'></img>
 
-**$P(x)$ changes usually leads $P(Y)$ changed, since $P(Y|X)$ ususally remains the same**
+
+* Target 改變了，但影響 Target, Features 之間的機制並沒有改變
+* **$P(x)$ changes usually leads $P(Y)$ changed, since $P(Y|X)$ ususally remains the same**
+
+### Concept Drift
+
+* Target 和 features 之間的機制改變了
+* features 沒改變
+
+<img src='./assets/10_37.png'></img>
+
+<img src='./assets/10_38.png'></img>
+
+# During Operation
+
+<img src='./assets/10_39.png'></img>
+
+<img src='./assets/10_40.png'></img>
+
+## Detecting shifts
+
+<img src='./assets/10_41.png'></img>
+
+<img src='./assets/10_42.png'></img>
+
+<img src='./assets/10_43.png'></img>
+
+<img src='./assets/10_44.png'></img>
+
+[alibi-detect](https://github.com/SeldonIO/alibi-detect)
+
+## Type of shifts
+
+<img src='./assets/10_45.png'></img>
+
+<img src='./assets/10_46.png'></img>
+
+<img src='./assets/10_47.png'></img>
+
+
+# Retraining Policy to against shifts
+
+<img src='./assets/10_48.png'></img>
+
+<img src='./assets/10_49.png'></img>
+
+
+# Monitoring
+
+<img src='./assets/10_50.png'></img>
+
+<img src='./assets/10_51.png'></img>
+
+<img src='./assets/10_52.png'></img>
+
+<img src='./assets/10_53.png'></img>
+
+<img src='./assets/10_54.png'></img>
+
+<img src='./assets/10_55.png'></img>
+
+<img src='./assets/10_56.png'></img>
+
+<img src='./assets/10_57.png'></img>
+
+<img src='./assets/10_58.png'></img>
+
+* [pandas-profiling](https://github.com/ydataai/pandas-profiling)
+* [facets](https://github.com/PAIR-code/facets)
+* [great_expectations](https://github.com/great-expectations/great_expectations)
+* pydantic or attrs
+
+# Problems when monitoring features
+
+<img src='./assets/10_59.png'></img>
+
+<img src='./assets/10_60.png'></img>
+
+<img src='./assets/10_61.png'></img>
+
+
+# Monitoring --> Continual Learning
+
+<img src='./assets/10_62.png'></img>
