@@ -19,4 +19,6 @@ third party blog
 | 5       | PyTorch & distributed training | 2021 Jan 27  |  35% |
 | 6       | Model Evaluation | 2021 Feb 1  |   |
 | 7       | Experiement Versioning and Tracking | 2021 Feb 3  |  35% |
+| 10      | Data Distribution Shifts and Monitoring| N/A  |  2022 Oct 27 |
+| 11      | Continual Learning| N/A  |  2022 Oct 27 |
 | Project       | End to End ML System design |   |   |

@@ -7,7 +7,7 @@ Agenda :
 
 1. Continual Learning
 2. Test in Production
-3. Data Distribution Shift on Stream Data
+3. [Data Distribution Shift on Stream Data - Mini Project](https://stanford-cs329s.github.io/slides/cs329s_11_slides_data_distribution_shifts_streams_shreya_shankar.pdf)
 
 
 # Continual Learning
